@@ -8,7 +8,7 @@ export default function Home(){
  return <main>
   <div className="grain" aria-hidden="true"/>
   <header className="nav"><div className="shell nav-inner">
-   <a className="brand" href="#top" aria-label="Sayed Shadman Sakib">SS<span>/</span>OPS</a>
+   <a className="brand" href="#top" aria-label="Sayed Shadman Sakib">SAKIB<span>/</span>OPS</a>
    <nav className="desktop-nav" aria-label="Primary">{nav.map(([label,id])=><a key={id} href={"#"+id}>{label}</a>)}</nav>
    <a className="mini-cta" href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={14}/></a>
   </div></header>
@@ -19,8 +19,8 @@ export default function Home(){
     <h1>Building <span>fintech systems</span> that make operations clearer, faster, and more reliable.</h1>
     <p className="lead">{profile.summary} Hands-on with Python, TypeScript, SQL/data workflows, REST/API integrations, dashboards, access-controlled applications, and technical documentation.</p>
     <div className="hero-links">
-     <a className="primary-btn" href="#systems">Explore systems <ArrowDown size={16}/></a>
-     <a className="ghost-btn" href="/resume">View resume</a>
+     <a className="primary-btn" href="#systems"><span>Explore systems</span><ArrowDown size={16}/></a>
+     <a className="ghost-btn" href="/resume"><span>View resume</span><ArrowUpRight size={16}/></a>
     </div>
     <div className="hero-meta"><span><MapPin size={14}/> {profile.location}</span><span>4+ years</span><span>FinTech operations</span></div>
    </div>
@@ -30,6 +30,7 @@ export default function Home(){
      <Image src="/profile-standing.webp" alt="Sayed Shadman Sakib in a navy suit" fill priority sizes="(max-width: 900px) 80vw, 38vw" className="portrait"/>
      <div className="portrait-gradient"/>
      <div className="portrait-label"><span>TECHNICAL OPERATIONS</span><strong>Systems × Data × Resolution</strong></div>
+     <div className="portrait-caption"><span>SAYED SHADMAN SAKIB</span><strong>Technical Operations Analyst</strong></div>
     </div>
     <div className="floating-card floating-top"><span>QUALITY CONTROL</span><strong>≈1,000 conversations/day</strong></div>
     <div className="floating-card floating-bottom"><span>ERROR REDUCTION</span><strong>60%</strong><small>database + manual verification</small></div>
