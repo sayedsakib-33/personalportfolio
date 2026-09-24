@@ -1,3 +1,4 @@
+"use client";
 import { education, experiences, impact, profile, projects, skillGroups } from "@/lib/data";
 
 export default function ResumePage(){
