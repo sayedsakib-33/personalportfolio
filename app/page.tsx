@@ -1,4 +1,5 @@
 import Image from "next/image";
+import profilePhoto from "@/lib/profilePhoto";
 import { ArrowDown, ArrowUpRight, Check, ChevronRight, Code2, Database, ExternalLink, Mail, MapPin, ShieldCheck, Workflow } from "lucide-react";
 import { education, experiences, impact, metrics, profile, projects, skillGroups } from "@/lib/data";
 
@@ -27,7 +28,7 @@ export default function Home(){
 
    <div className="hero-visual">
     <div className="portrait-frame">
-     <Image src="/profile-standing.webp" alt="Sayed Shadman Sakib in a navy suit" fill priority sizes="(max-width: 900px) 80vw, 38vw" className="portrait"/>
+     <Image src={profilePhoto} alt="Sayed Shadman Sakib in a navy suit" fill priority unoptimized sizes="(max-width: 900px) 80vw, 38vw" className="portrait"/>
      <div className="portrait-gradient"/>
      <div className="portrait-label"><span>TECHNICAL OPERATIONS</span><strong>Systems × Data × Resolution</strong></div>
      <div className="portrait-caption"><span>SAYED SHADMAN SAKIB</span><strong>Technical Operations Analyst</strong></div>
@@ -53,9 +54,9 @@ export default function Home(){
 
   <section id="systems" className="section dark-section"><div className="shell">
    <SectionHeader eyebrow="02 / SYSTEMS" title="I build tools around the work." text="The most useful technical projects are the ones that remove context switching, surface exceptions early, and give teams a reliable operational workflow." dark/>
-   <div className="project-grid">{projects.map((project,index)=><article className="project-card" key={project.name}>
+   <div className="project-grid">{projects.map((project,index)=><article className={"project-card "+(project.featured?"project-featured":"")} key={project.name}>
     <div className="project-number">{"0"+(index+1)}</div>
-    <div className="project-icon">{index===0?<Database size={22}/>:<ShieldCheck size={22}/>}</div>
+    <div className="project-icon">{index===0?<Database size={22}/>:index===1?<ShieldCheck size={22}/>:index===2?<Database size={22}/>:index===3?<Workflow size={22}/>:index===4?<ShieldCheck size={22}/>:<Code2 size={22}/>}</div>
     <div className="project-type">{project.type}</div><h3>{project.name}</h3><p>{project.description}</p>
     <div className="stack">{project.stack.map(item=><span key={item}>{item}</span>)}</div>
     <div className="project-proof"><span>Workflow proof</span><strong>{project.proof}</strong><ChevronRight size={15}/></div>
