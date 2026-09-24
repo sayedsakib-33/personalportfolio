@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { ArrowDown, ArrowUpRight, Check, ChevronRight, Database, Github, Linkedin, Mail, MapPin, ShieldCheck, Workflow } from "lucide-react";
+import { ArrowDown, ArrowUpRight, Check, ChevronRight, Code2, Database, ExternalLink, Mail, MapPin, ShieldCheck, Workflow } from "lucide-react";
 import { education, experiences, impact, metrics, profile, projects, skillGroups } from "@/lib/data";
 
 const nav=[["Experience","experience"],["Systems","systems"],["Impact","impact"],["Skills","skills"]] as const;
@@ -80,8 +80,8 @@ export default function Home(){
    <div><div className="eyebrow soft">LET&apos;S CONNECT</div><h2>For teams solving difficult operational problems.</h2><p>I work best where technical investigation, process design, data quality, and stakeholder coordination need to come together.</p></div>
    <div className="contact-actions">
     <a className="primary-btn" href={"mailto:"+profile.email}><Mail size={16}/>{profile.email}</a>
-    <a className="ghost-btn" href={profile.linkedin} target="_blank" rel="noreferrer"><Linkedin size={16}/>LinkedIn</a>
-    <a className="ghost-btn" href={profile.github} target="_blank" rel="noreferrer"><Github size={16}/>GitHub</a>
+    <a className="ghost-btn" href={profile.linkedin} target="_blank" rel="noreferrer"><ExternalLink size={16}/>LinkedIn</a>
+    <a className="ghost-btn" href={profile.github} target="_blank" rel="noreferrer"><Code2 size={16}/>GitHub</a>
    </div>
   </div></section>
 
