@@ -1,5 +1,6 @@
 import Image from "next/image";
 import profilePhoto from "@/lib/profilePhoto";
+import ThemeToggle from "@/app/components/theme-toggle";
 import { ArrowDown, ArrowUpRight, Check, ChevronRight, Code2, Database, ExternalLink, Mail, MapPin, ShieldCheck, Workflow } from "lucide-react";
 import { education, experiences, impact, metrics, profile, projects, skillGroups } from "@/lib/data";
 
@@ -11,7 +12,7 @@ export default function Home(){
   <header className="nav"><div className="shell nav-inner">
    <a className="brand" href="#top" aria-label="Sayed Shadman Sakib">SAKIB<span>/</span>OPS</a>
    <nav className="desktop-nav" aria-label="Primary">{nav.map(([label,id])=><a key={id} href={"#"+id}>{label}</a>)}</nav>
-   <a className="mini-cta" href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={14}/></a>
+   <div className="nav-actions"><ThemeToggle/><a className="mini-cta" href={profile.linkedin} target="_blank" rel="noreferrer">LinkedIn <ArrowUpRight size={14}/></a></div>
   </div></header>
 
   <section id="top" className="hero shell">
